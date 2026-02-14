@@ -1,0 +1,219 @@
+:root{
+    --background-color: rgb(178, 195, 229);
+}
+
+
+
+body{
+    margin: 0px 0px 0px 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    min-height: 100vh;
+    background-color: var(--background-color);
+    display: grid;
+    grid-template-columns: repeat(10 , minmax(100px , auto));
+    grid-template-rows: repeat(8 , 1fr);
+    
+}
+
+.dark_mode{
+    background-color: rgb(65, 63, 63);
+}
+
+
+
+.mode{
+    height: 35px;
+    min-width: fit-content;
+    width: 6vw;
+    /* padding: 8px; */
+    border-radius: 8px;
+    background-color: #198655;
+    position: absolute;
+    top: 18px;
+    right: 140px;
+
+    /* margin-right: 8vw; */
+    /* margin-top: 1vh; */
+    top: 16px;
+    font-weight: bold;
+    display: flex;
+    color: rgb(50, 45, 45);
+}
+
+.button{
+    width: 80%;
+    height: 100%;
+    border-radius: 8px;
+    align-self: flex-end;
+    background-color: #198655;
+    border: none;
+}
+
+.mode_icon{
+    width: 35%;
+    height: 100%;
+    background-image: url("/images/LIght-dark\ mode.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+
+.mainbox{
+    grid-row: 3 / 7;
+    grid-column: 4 / 8;
+    background-color: white;
+    border-radius: 12px;
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 8px 8px 8px 8px;
+    position: relative;
+}
+
+.mainbox::after , .mainbox::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    z-index: -1;
+    padding: 6px;
+    border-radius: 12px;
+    background-image: conic-gradient(rgb(244, 206, 172), rgb(255, 127, 80), rgb(159, 122, 234), rgb(94, 120, 129)  , rgb(243, 204, 171) );
+}
+
+.mainbox::before{
+    filter: blur(2rem);
+}
+
+.icon{
+    width: 15%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    background-image: url("/images/Document icon.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.heading > h2{
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+.line > p{
+    color: rgb(105, 116, 124);
+}
+
+form{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.textbox {
+    max-width: 80%;
+    min-width: 70%;
+    max-height: 4vh;
+    display: flex;
+    flex: 1;
+    margin-bottom: 8px;
+}
+
+.textbox > input{
+    width: 100%;
+    height: 100%; 
+    font-weight: bolder;
+    font-size: large;
+    border-radius: 8px;
+}
+
+.btn{
+    min-width: fit-content;
+    /* width: 10vw; */
+    min-height: 5vh;
+    max-height: fit-content;
+    background-color: rgb(103, 220, 233);
+    /* background-color: aqua; */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    /* flex: 1; */
+    border: 2px solid black;
+    border-radius: 18px;
+    justify-content: space-evenly;
+}
+
+.btn_icon{
+    width: 24px;
+    height: 24px;
+    background-image: url("/images/convert\ icon\ image.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    margin-right: 6px;
+    margin-left: 6px;
+}
+
+.btn > button{
+    margin: 8px 8px 8px 8px;
+    /* width: 60%; */
+    min-width: fit-content;
+    height: 100%;
+    font-size: larger;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: rgb(103, 220, 233);
+    /* flex-direction: column; */
+    justify-content: space-around;
+    border-radius: 18px;
+}
+
+
+
+@media (max-width : 900px) {
+    body{
+        display: grid;
+        grid-template-columns: repeat(6 , minmax(50px , auto));
+    }
+    
+    .mainbox{
+    grid-row: 2 / 8;
+    grid-column: 2 / 6;
+    background-color: white;
+}
+}
+
+.border_style::after , .border_style::before{
+    content: "";
+    display: flex;
+    height: 35px;
+    width: 6vw;
+    position: absolute;
+    z-index: -2;
+    padding: 6px;
+    top: 9.5px;
+    right: 135px;
+    border-radius: 8px;
+    background-image: conic-gradient(rgb(244, 206, 172), rgb(255, 127, 80), rgb(159, 122, 234), rgb(94, 120, 129)  , rgb(243, 204, 171) );;
+}
+
+.border_style::before{
+    filter: blur(1.5rem);
+}
+
+
+
+
+

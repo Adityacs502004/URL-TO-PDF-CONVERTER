@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Url to pdf converter</title>
+    <link rel="stylesheet" href="/style/style.css">
+</head>
+<body>
+        <div class="mode">
+            <div class="mode_icon"></div>
+            <button class="button" type="button">Light/Dark Mode</button>  
+        </div>
+        <div class="border_style"></div>
+           
+        <div class="mainbox">
+            <div class="icon">
+            </div>
+            <div class="heading">
+                <h2>URL to PDF converter</h2>
+            </div>
+            <div class="line">
+                <p>Enter any webpage URL and convert it to a downloadable PDF</p>
+            </div>
+            <form action="/submit" method="post">
+                <div class="textbox">   
+                    <input type="text" placeholder="Enter url here" name="url">
+                </div>
+                
+                
+                <div class="btn">
+                    <div class="btn_icon"></div>
+                    <button type="submit">Convert
+                    </button>
+                </div>
+            </form>
+            
+        </div>
+        
+        <script>
+            let body = document.querySelector("body");
+            let btn = document.querySelector(".mode");
+            let count = 1;
+
+            btn.addEventListener("click" , ()=>{
+                if ((count%2) != 0){
+                    body.classList.add("dark_mode");
+                    count ++;
+                }
+                else{
+                    body.classList.remove("dark_mode");
+                    count++;
+                }
+            })
+        </script>
+</body>
+</html>
